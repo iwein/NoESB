@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>iwein.samples</groupId>
   <artifactId>load-balancing</artifactId>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
   <version>1.0.0.BUILD-SNAPSHOT</version>
   <name>load-balancing</name>
   <url>http://maven.apache.org</url>

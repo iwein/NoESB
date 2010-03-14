@@ -6,3 +6,4 @@ build
 *.iws
 target
 .idea
+MANIFEST.MF
