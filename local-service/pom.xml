@@ -2,18 +2,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>iwein.samples</groupId>
+  <groupId>org.noesb</groupId>
   <artifactId>local-service</artifactId>
   <packaging>jar</packaging>
   <version>1.0.0.BUILD-SNAPSHOT</version>
   <name>local-service</name>
   <url>http://maven.apache.org</url>
   <parent>
-    <groupId>iwein.samples</groupId>
+    <groupId>org.noesb</groupId>
     <artifactId>parent</artifactId>
     <version>1.0.0.BUILD-SNAPSHOT</version>
   </parent>
   <dependencies>
+    <!-- internal -->
+    <dependency>
+      <groupId>org.noesb</groupId>
+      <artifactId>load-balancing</artifactId>
+    </dependency>
+    <!-- external -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
