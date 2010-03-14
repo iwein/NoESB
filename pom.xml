@@ -58,6 +58,7 @@
   </dependencyManagement>
   <modules>
     <module>load-balancing</module>
+    <module>local-service</module>
   </modules>
   <build>
     <plugins>
@@ -76,7 +77,7 @@
         <configuration>
           <failOnWarnings>false</failOnWarnings>
           <manifestTemplatePath>${basedir}/template.mf</manifestTemplatePath>
-          <outputPath>${project.build.resourceDirectory}</outputPath>
+          <outputPath>${basedir}/src/main/resources</outputPath>
         </configuration>
         <!-- generate the manifest automatically during packaging -->
         <executions>
@@ -93,7 +94,7 @@
         <artifactId>maven-jar-plugin</artifactId>
         <configuration>
           <archive>
-            <manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
+            <manifestFile>${basedir}/src/main/resources/META-INF/MANIFEST.MF</manifestFile>
           </archive>
         </configuration>
       </plugin>
