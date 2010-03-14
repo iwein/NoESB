@@ -17,6 +17,13 @@
   </properties>
   <dependencyManagement>
     <dependencies>
+      <!-- internal -->
+      <dependency>
+        <groupId>org.noesb</groupId>
+        <artifactId>load-balancing</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <!-- external -->
       <dependency>
         <groupId>org.springframework.integration</groupId>
         <artifactId>org.springframework.integration</artifactId>
