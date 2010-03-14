@@ -9,6 +9,7 @@
   <name>parent</name>
   <url>http://maven.apache.org</url>
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit.version>4.7</junit.version>
     <spring.version>3.0.1.RELEASE-A</spring.version>
     <spring.integration.version>2.0.0.M2</spring.integration.version>
@@ -74,8 +75,8 @@
         <version>1.0.0.RELEASE</version>
         <configuration>
           <failOnWarnings>false</failOnWarnings>
-          <manifestTemplatePath>template.mf</manifestTemplatePath>
-          <outputPath>src/main/resources/</outputPath>
+          <manifestTemplatePath>${basedir}/template.mf</manifestTemplatePath>
+          <outputPath>${project.build.resourceDirectory}</outputPath>
         </configuration>
         <!-- generate the manifest automatically during packaging -->
         <executions>
