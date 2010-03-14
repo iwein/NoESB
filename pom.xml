@@ -68,18 +68,34 @@
           <target>1.6</target>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>com.springsource.bundlor</groupId>
-        <artifactId>com.springsource.bundlor.maven</artifactId>
-        <executions>
-          <execution>
-            <id>bundlor</id>
-            <goals>
-              <goal>bundlor</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+<plugin>
+				<groupId>com.springsource.bundlor</groupId>
+				<artifactId>com.springsource.bundlor.maven</artifactId>
+				<version>1.0.0.RELEASE</version>
+				<configuration>
+					<failOnWarnings>false</failOnWarnings>
+					<manifestTemplatePath>template.mf</manifestTemplatePath>
+					<outputPath>src/main/resources/</outputPath>
+				</configuration>
+				<!-- generate the manifest automatically during packaging -->
+				<executions>
+					<execution>
+						<id>bundlor</id>
+						<goals>
+							<goal>bundlor</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
+					</archive>
+				</configuration>
+			</plugin>
     </plugins>
   </build>
   <repositories>
