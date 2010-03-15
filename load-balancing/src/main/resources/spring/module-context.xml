@@ -8,9 +8,19 @@
                  http://www.springframework.org/schema/integration
                  http://www.springframework.org/schema/integration/spring-integration.xsd
                 ">
+
+  <!-- This is the source of messages it is not started because we want to delay startup until there is a subscriber -->
+  <i:inbound-channel-adapter channel="loadBalancer" 
+                             auto-startup="false" ref="sequentialMessageSource" method="next"/>
+  <bean id="sequentialMessageSource" class="org.noesb.loadbalancer.SequentialMessageSource"/>
+
   <i:channel id="loadBalancer">
     <!-- These are just the defaults, change them to experiment -->
     <i:dispatcher failover="true" load-balancer="round-robin"/>
   </i:channel>
 
-</beans>
+  <i:poller default="true">
+    <i:interval-trigger interval="1000"/>
+  </i:poller>
+
+</beans>                                            
