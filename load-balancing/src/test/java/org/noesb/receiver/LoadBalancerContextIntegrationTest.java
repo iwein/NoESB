@@ -1,4 +1,4 @@
-package org.noesb.loadbalancer;
+package org.noesb.receiver;
 
 import org.junit.Before;
 import org.junit.Test;

@@ -12,7 +12,7 @@
   <!-- This is the source of messages it is not started because we want to delay startup until there is a subscriber -->
   <i:inbound-channel-adapter channel="loadBalancer" 
                              auto-startup="false" ref="sequentialMessageSource" method="next"/>
-  <bean id="sequentialMessageSource" class="org.noesb.loadbalancer.SequentialMessageSource"/>
+  <bean id="sequentialMessageSource" class="org.noesb.receiver.SequentialMessageSource"/>
 
   <i:channel id="loadBalancer">
     <!-- These are just the defaults, change them to experiment -->

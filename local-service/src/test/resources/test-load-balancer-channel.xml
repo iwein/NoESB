@@ -8,5 +8,5 @@
                  http://www.springframework.org/schema/integration
                  http://www.springframework.org/schema/integration/spring-integration.xsd
                 ">
-  <i:logging-channel-adapter channel="loadBalancer"/>
+  <i:channel id="loadBalancer"/>
 </beans>
