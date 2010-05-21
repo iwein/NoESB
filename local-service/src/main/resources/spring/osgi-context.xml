@@ -6,7 +6,6 @@
                "http://www.springframework.org/schema/beans
                  http://www.springframework.org/schema/beans/spring-beans.xsd
                  http://www.springframework.org/schema/osgi
-                 http://www.springframework.org/schema/osgi/spring-osgi.xsd
-                ">
+                 http://www.springframework.org/schema/osgi/spring-osgi.xsd">
   <reference interface="org.springframework.integration.channel.SubscribableChannel" id="loadBalancer"/>
 </beans:beans>

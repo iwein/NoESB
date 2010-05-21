@@ -1,3 +1,0 @@
-Bundle-ManifestVersion: 2
-Manifest-Version: 2
-Bundle-SymbolicName: org.noesb.loadbalancing
